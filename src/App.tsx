@@ -2,20 +2,33 @@ import React, { FC } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import store from "./redux/store";
-import { Main, Catalog, Product, Cart } from "./pages";
+import { Aside, Header, Tabs, PlayersBlock, Stats } from "./components";
+
+import "./scss/style.scss";
 
 const App: FC = () => {
-
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Route path="/" component={Main} exact></Route>
-        <Route path="/catalog" component={Catalog} exact></Route>
-        <Route path="/product" component={Product} exact></Route>
-        <Route path="/cart" component={Cart} exact></Route>
-      </BrowserRouter>
-    </Provider>
+    <div className="container">
+      <div className="wrapper__inner">
+
+        <Aside></Aside>
+
+        <main className="main">
+
+          <Header></Header>
+
+          <div className="content">
+
+          <Tabs></Tabs>
+            <div className="content__info">
+
+              <PlayersBlock></PlayersBlock>
+              <Stats></Stats>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
   );
 };
 
