@@ -1,0 +1,360 @@
+
+@media (max-width:1536px) {
+
+  .profile img {
+      width: 45px;
+      height: 45px;
+  }
+  
+  .aside {
+    min-width: 232px;
+    padding-top: 21px;
+    padding-bottom: 61px;
+  }
+  .logo {
+    margin-bottom: 21px;
+
+
+  }
+  .menu__link {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .card {
+    img {
+      width: 50px;
+      height: 65px;
+    }
+  }
+  .club__title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .club__name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .club__item {
+
+    span {
+      font-size: 11px;
+      line-height: 15px;
+    }
+  }
+  .club__change {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .aside__feedback {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .tabs__item {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+
+  .header__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .nav__item {
+    padding: 24px 36px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+
+  .stats__top-title {
+    font-size: 17px;
+    line-height: 20px;
+    max-width: 290px;
+  }
+
+
+  .card__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .card__num {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .players-block {
+    min-width: 240px;
+  }
+  .players-block__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .list__item-time,
+  .label__radio-text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+
+
+@media (max-width:1440px) {
+  .block-club__title {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+
+}
+
+@media (max-width:1366px) {
+
+  .header__title{
+    font-size: 19px;
+    line-height: 27px;
+    margin-right: 25px;
+  }
+  .nav__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  .aside {
+    min-width: 206px;
+    padding-top: 21px;
+    padding-bottom: 61px;
+  }
+  .logo {
+    margin-bottom: 4px;
+  }
+  .aside__feedback {
+    padding-left: 43px;
+
+    span {
+      font-size: 11px;
+      line-height: 15px;
+  
+    }
+  }
+
+
+  .menu__title {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .menu__link {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .club__title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .club__item {
+
+    span {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+  .club__change {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .aside__feedback {
+
+    span {
+      font-size: 11px;
+      line-height: 15px;
+  
+    }
+  }
+
+  .stats__top-title {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 255px;
+  }
+
+  .card {
+    img {
+      width: 46px;
+      height: 58px;
+    }
+  }
+  .card__name {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .card__num {
+    font-size: 71px;
+    line-height: 71px;
+  }
+  .stats__download {
+
+    img {
+      width: 36px;
+      height: 36px;
+
+    }
+  }
+
+  .players-block {
+    min-width: 240px;
+  }
+  .players-block__title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .list__item-time,
+  .label__radio-text {
+    font-size: 13px;
+    line-height: 13px;
+  }
+  .tabs__item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+}
+
+@media (max-width:1280px) {
+  .aside {
+    min-width: 193px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+  .players-block {
+    min-width: 190px;
+  }
+  .block-club__title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .label__radio-text {
+    margin-left: 10px;
+  }
+}
+
+
+@media (max-width:1240px) {
+  .aside {
+    min-width: 108px;
+    width: 108px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .aside__body {
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 17px;
+  }
+  .club__name,
+  .menu__link {
+    display: none;
+  } 
+  .block-club__title {
+    padding: 15px 0;
+  }
+  .block-club__title span {
+    display: none;
+  }
+  .block-club__title::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .club__title {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .club__logo {
+    margin-bottom: 35px;
+  }
+  .club__item span {
+      display: none;
+  }
+  .club__change span {
+      display: none;
+  }
+  .aside__feedback span {
+      display: none;
+  }
+  .club__logo img {
+    max-width: 100%;
+}
+  .menu__item {
+    justify-content: center;
+  }
+  .block-club {
+    max-width: 52px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  .club__item {
+    padding: 15px 0;
+    justify-content: center;
+  }
+  .club__item img {
+    position: static;
+    transform: translate(0, 0);
+    max-width: 22px;
+  }
+  .club__change {
+    margin-left: 0;
+    padding: 25px 0 14px;
+  }
+
+  .club__change {
+    position: relative;
+
+    width: 23px;
+    height: 18px;
+    padding: 15px 0;
+
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .aside__feedback {
+    padding-left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .aside__feedback::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 16px;
+  }
+
+  .content__info {
+    padding: 26px 34px;
+  }
+  .stats {
+    margin-left: 70px;
+  }
+  .nav__item {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .stats__top-title {
+    font-size: 13px;
+    line-height: 16px;
+    max-width: 224px;
+  }
+  .card {
+    padding-right: 35px;
+  }
+}
