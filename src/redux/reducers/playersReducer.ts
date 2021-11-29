@@ -1,12 +1,12 @@
 import { CONST } from "../CONST"
-import { playersActionCreatorType } from "../types"
+import { playersActionType } from "../types"
 
 const initialState = {
   players: []
 }
 
 
-export const playersReducer = (state = initialState, action: playersActionCreatorType) => {
+export const playersReducer = (state = initialState, action: playersActionType) => {
   switch (action.type) {
     case CONST.PLAYERS:
       return {
