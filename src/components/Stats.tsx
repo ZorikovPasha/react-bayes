@@ -1,15 +1,16 @@
 import React from "react";
-import Plot from "react-plotlyjs-ts";
-
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
+import { Bar } from "react-chartjs-2";
 
 import download from "../images/icons/download.svg";
 import face from "../images/player.png";
 
 interface IStatsProps {
-  features: number[]
+  features: number[];
 }
 
 const Stats: React.FC<IStatsProps> = ({ features }) => {
+  ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
   const metrics: string[] = [];
   features &&
@@ -17,7 +18,38 @@ const Stats: React.FC<IStatsProps> = ({ features }) => {
       metrics.push(`matric_${idx}`);
     });
 
-    // alert(features)
+  const options = {
+    indexAxis: "y" as const,
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "right" as const,
+      },
+      title: {
+        display: false,
+      },
+    },
+    legend: {
+      display: false
+   }
+  };
+
+  const data = {
+    labels: metrics,
+    datasets: [
+      {
+        label: "",
+        data: features,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
 
   return (
     <div className="content__stats stats">
@@ -38,23 +70,9 @@ const Stats: React.FC<IStatsProps> = ({ features }) => {
           <img src={download} alt="download" />
         </button>
       </div>
-      {features &&  <div>{features}</div>}  
-      {/* <div className="stats__chart" id="chart">
-        {metrics && (
-          <Plot
-            data={[
-              {
-                type: "bar",
-                x: [20, 15, -2],
-                y: ["dd", "dd", "cc"],
-                orientation: "h",
-                width: 400,
-                height: 400
-              },
-            ]}
-          />
-        )}
-      </div> */}
+
+      <Bar options={options} data={data} />
+
     </div>
   );
 };

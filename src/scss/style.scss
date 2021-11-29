@@ -17,7 +17,7 @@
 
   &__feedback {
     margin-top: auto;
-    padding: 10px 13px 10px 57px;
+    padding: 10px 13px 10px 36px;
     background: #ec805b;
     border-radius: 5px;
     position: relative;
@@ -28,12 +28,12 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 21px;
+      left: 10px;
       top: 50%;
       transform: translate(0%, -50%);
 
-      width: 24px;
-      height: 22px;
+      width: 19px;
+      height: 18px;
       background-image: url("../images/icons/feedback.svg");
       background-size: contain;
     }
@@ -47,8 +47,8 @@
 
     span {
       font-weight: 600;
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 13px;
+      line-height: 17px;
       color: #ffffff;
     }
   }
@@ -87,6 +87,7 @@
     align-items: center;
     padding: 13px 0px 13px 0;
     color: #6a6e71;
+    cursor: pointer;
 
     transition: all .2s;
     opacity: 1;

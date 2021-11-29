@@ -46,7 +46,16 @@
   .club__change {
     font-size: 13px;
     line-height: 18px;
-  }
+
+    margin-left: 0;
+    padding-left: 25px;
+
+
+    &::after {
+      width: 20px;
+      height: 17px;
+    }
+    }
 
   .aside__feedback {
     font-size: 13px;
@@ -133,7 +142,7 @@
     margin-bottom: 4px;
   }
   .aside__feedback {
-    padding-left: 43px;
+    padding-left: 32px;
 
     span {
       font-size: 11px;
@@ -166,15 +175,7 @@
   .club__change {
     font-size: 11px;
     line-height: 15px;
-  }
-  .aside__feedback {
-
-    span {
-      font-size: 11px;
-      line-height: 15px;
-  
     }
-  }
 
   .stats__top-title {
     font-size: 16px;
@@ -227,8 +228,7 @@
 @media (max-width:1280px) {
   .aside {
     width: 193px;
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding: 15px 15px 50px 15px;
   }
   .players-block {
     min-width: 190px;
@@ -239,6 +239,19 @@
   }
   .label__radio-text {
     margin-left: 10px;
+  }
+
+  .aside__feedback {
+
+    span {
+      font-size: 10px;
+    }
+      
+    &::after {
+      width: 16px;
+      height: 15px;
+      left: 10px;
+    }
   }
 }
 
