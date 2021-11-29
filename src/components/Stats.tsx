@@ -1,6 +1,7 @@
 import React from "react";
 
 import download from "../images/icons/download.svg";
+import face from "../images/player.png";
 
 const Stats: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Stats: React.FC = () => {
             <p className="card__country">LW</p>
           </div>
           <p className="card__num">19</p>
-          <img src="images/player.png" alt="player's face" />
+          <img src={face} alt="player's face" />
         </div>
 
         <button className="stats__download">

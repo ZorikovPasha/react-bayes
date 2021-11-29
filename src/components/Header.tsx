@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 import avatar from "../images/avatar.png";
 
 const Header: React.FC = () => {
+  const [currentNavItem, setCurrentNavItem] = useState<string>("");
+
+  const onClickNavItem: React.MouseEventHandler<HTMLLIElement> = (e: any): void => {
+    setCurrentNavItem(e.currentTarget.id);
+  };
+
+  const navItems = [
+    {
+      link: "Brief",
+      text: "Сводка",
+    },
+    {
+      link: "Lineups",
+      text: "Составы",
+    },
+    {
+      link: "Statistics",
+      text: "Подробная статистика",
+    },
+    {
+      link: "Analysys",
+      text: "Анализ матча",
+    },
+  ];
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -10,30 +37,20 @@ const Header: React.FC = () => {
           <h1 className="header__title">Обзор матча</h1>
           <nav className="nav">
             <ul className="nav__list">
-              <li className="nav__item">
-                <a className="nav__link" href="#">
-                  Сводка
-                </a>
-              </li>
-              <li className="nav__item active">
-                <a className="nav__link" href="#">
-                  Составы
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link" href="#">
-                  Подробная статистика
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link" href="#">
-                  Анализ матча
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li 
+                  className={currentNavItem === item.link ? "nav__item active" : "nav__item"} 
+                  onClick={onClickNavItem} 
+                  id={item.link}
+                  key={item.link}
+                  >
+                  <Link to={`/${item.link}`}>{item.text}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
-        <a href="" className="profile">
+        <a className="profile" href="#">
           <img src={avatar} alt="avatar" />
         </a>
       </div>

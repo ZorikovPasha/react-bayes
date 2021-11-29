@@ -43,6 +43,13 @@
     line-height: 25px;
     color: #6a6e71;
     padding: 32px 43px;
+
+    transition: opacity .2s;
+    opacity: 1;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   &__item.active {

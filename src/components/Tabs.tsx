@@ -1,20 +1,32 @@
 import React from "react";
 
-const Tabs: React.FC = () => {
+import { tabsItemType } from "../types";
+
+interface ITabsProps {
+  tabs: tabsItemType[],
+  currentTab: number,
+  setcurrentTab: React.Dispatch<React.SetStateAction<number>>
+}
+
+const Tabs: React.FC<ITabsProps> = ({ tabs, currentTab, setcurrentTab }) => {
+
+  const onClickTab: React.MouseEventHandler<HTMLLIElement> = (e: any): void => {
+    setcurrentTab( Number(e.currentTarget.dataset.id) );
+  };
+
+
   return (
     <div className="content__tabs tabs">
-      <a href="" className="tabs__item active">
-        Атака
-      </a>
-      <a href="" className="tabs__item">
-        Оборона
-      </a>
-      <a href="" className="tabs__item">
-        Пасы
-      </a>
-      <a href="" className="tabs__item">
-        BT Score
-      </a>
+      {tabs.map((item) => (
+        <li 
+          className={currentTab === item.id ? "tabs__item active" : "tabs__item"} 
+          onClick={onClickTab} 
+          data-id={item.id}
+          key={item.id}
+          >
+          {item.text}
+        </li>
+      ))}
     </div>
   );
 };
