@@ -11,7 +11,7 @@ export const playersActionCreator = (items: string[]) => ({
 export const playersThunkCreator = (): ThunkAction<void, void, unknown, playersActionType> => {
   return dispatch => {
     try {
-      fetch("http://localhost:3000/db.json")
+      fetch("https://fervent-archimedes-4fab00.netlify.app/db.json")
         .then(response => {
           return response.json()
         })
